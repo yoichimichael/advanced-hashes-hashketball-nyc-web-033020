@@ -1,4 +1,4 @@
-require "pry"
+#require 'pry'
 
 def game_hash
   { :home => {
@@ -50,7 +50,6 @@ def team_colors(team)
     end
 end
 
-def team_names(teams)
-    binding.pry
-    teams = [home, away]
+def team_names(home, away)
+    [home[:team_name], away[:team_name] 
 end
