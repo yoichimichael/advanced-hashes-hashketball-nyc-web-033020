@@ -48,6 +48,6 @@ def team_colors(team)
     end
 end
 
-def team_names(home, away)
+def team_names(teams)
     teams = [home, away]
 end
