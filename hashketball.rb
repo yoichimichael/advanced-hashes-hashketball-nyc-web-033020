@@ -48,8 +48,8 @@ def team_colors(team)
     end
 end
 
-def team_names(game)
-    home_team = game[:home][:team_name]
-    away_team = game[:away][:team_name]
+def team_names(home, away)
+    home_team = home[:team_name]
+    away_team = away[:team_name]
     [home_team, away_team].join(", ")
 end
