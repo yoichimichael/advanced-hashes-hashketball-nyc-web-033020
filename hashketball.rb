@@ -51,5 +51,20 @@ def team_colors(team)
 end
 
 def team_names(home, away)
-    [home[:team_name], away[:team_name]] 
+    [home[:team_name], away[:team_name]]
+end
+
+def player_numbers(team)
+    home_team = game_hash[:home]
+    away_team = game_hash[:away]
+    if home_team.has_value?(team)
+      h_roster_nums = []
+      home_team[:players].map { |hash| h_roster_nums << hash[:number] }
+      return h_roster_nums
+    end
+    if away_team.has_value?(team)
+      a_roster_nums = []
+      away_team[:players].map { |hash| a_roster_nums << hash[:number] }
+      return h_roster_nums
+    end
 end
