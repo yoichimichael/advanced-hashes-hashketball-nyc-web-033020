@@ -51,5 +51,6 @@ def team_colors(team)
 end
 
 def team_names(teams)
+    binding.pry
     teams = [home, away]
 end
