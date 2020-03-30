@@ -51,5 +51,5 @@ end
 def team_names(home, away)
     home_team = home[:team_name]
     away_team = away[:team_name]
-    teams = [home_team, away_team].join(", ")
+    teams = [home_team, away_team]
 end
