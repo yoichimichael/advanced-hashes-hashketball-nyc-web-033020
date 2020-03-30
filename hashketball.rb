@@ -91,7 +91,27 @@ end
 def big_shoe_rebounds
   home_roster = game_hash[:home][:players]
   away_roster = game_hash[:away][:players]
+
   home_shoes = []
   away_shoes = []
+
   home_roster.map { |hash| home_shoes << hash[:shoe]}
+  away_roster.map { |hash| away_shoes << hash[:shoe]}
+
+	h_biggest = home_shoes.sort![-1]
+	a_biggest = away_shoes.sort![-1]
+
+	if h_biggest > a_biggest
+		home_roster.select do |hash|
+			if hash[:shoe] == h_biggest
+				return hash[:rebounds]
+			end
+		end
+	else
+		away_roster.select do |hash|
+			if hash[:shoe] == a_biggest
+				return hash[:rebounds]
+			end
+		end
+	end
 end
