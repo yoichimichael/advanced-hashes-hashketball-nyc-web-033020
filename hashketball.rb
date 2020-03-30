@@ -51,5 +51,5 @@ def team_colors(team)
 end
 
 def team_names(home, away)
-    [home[:team_name], away[:team_name] 
+    [home[:team_name], away[:team_name]] 
 end
