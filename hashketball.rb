@@ -60,11 +60,11 @@ def player_numbers(team)
     if home_team.has_value?(team)
       h_roster_nums = []
       home_team[:players].map { |hash| h_roster_nums << hash[:number] }
-      return h_roster_nums
+      return h_roster_nums.sort
     end
     if away_team.has_value?(team)
       a_roster_nums = []
       away_team[:players].map { |hash| a_roster_nums << hash[:number] }
-      return h_roster_nums
+      return a_roster_nums.sort
     end
 end
