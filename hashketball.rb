@@ -50,7 +50,7 @@ def team_colors(team)
     end
 end
 
-def team_names(game)
+def team_names
     [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
 
