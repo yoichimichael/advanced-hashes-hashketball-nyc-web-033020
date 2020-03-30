@@ -70,13 +70,20 @@ def player_numbers(team)
 end
 
 def player_stats(player)
-  home_roster = game_hash[:home][:players]
-  #away_roster = game_hash[:away][:players]
-  home_roster.select do |hash| ]
-    if hash.has_value?(player)
-      stats_hash = {}
-      hash.map { |k,v| stats_hash[k] = v if v != player }
+    home_roster = game_hash[:home][:players]
+		away_roster = game_hash[:away][:players]
+
+    home_roster.select do |hash|
+			if hash.has_value?(player)
+				hash.shift
+				return hash
+      end
+		end
+
+		away_roster.select do |hash|
+			if hash.has_value?(player)
+				hash.shift
+				return hash
+      end
     end
-  end
-  #away_roster.select { |hash| return hash[:points] if hash.has_value?(player) }
 end
