@@ -93,5 +93,5 @@ def big_shoe_rebounds
   away_roster = game_hash[:away][:players]
   home_shoes = []
   away_shoes = []
-  game_hash[]
+  home_roster.map { |hash| home_shoes << hash[:shoe]}
 end
