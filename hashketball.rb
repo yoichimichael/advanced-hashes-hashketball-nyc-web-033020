@@ -68,3 +68,15 @@ def player_numbers(team)
       return a_roster_nums.sort
     end
 end
+
+def player_stats(player)
+  home_roster = game_hash[:home][:players]
+  #away_roster = game_hash[:away][:players]
+  home_roster.select do |hash| ]
+    if hash.has_value?(player)
+      stats_hash = {}
+      hash.map { |k,v| stats_hash[k] = v if v != player }
+    end
+  end
+  #away_roster.select { |hash| return hash[:points] if hash.has_value?(player) }
+end
